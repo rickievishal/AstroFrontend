@@ -97,7 +97,7 @@ const Footer = () => {
               <div className="flex items-center gap-3"><Phone className="w-5 h-5 text-green-400" /><span>+91 (Appointment Only)</span></div>
               <div className="flex items-center gap-3"><Mail className="w-5 h-5 text-blue-400" /><span>kalagaprasadastrology@gmail.com</span></div>
 
-              <div className="flex items-center gap-3"><AiFillFacebook className="w-5 h-5 text-blue-400" /><a href='https://www.facebook.com/prasad.kalaga1'><span>kalagaprasadastrology@gmail.com</span></a></div>
+              <div className="flex items-center gap-3"><AiFillFacebook className="w-5 h-5 text-blue-400" /><a href='https://www.facebook.com/prasad.kalaga1'><span>Facebook</span></a></div>
 
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-purple-400 mt-1" />
