@@ -23,8 +23,9 @@ const SignIn = ({setUser}) => {
     };
 
     try{
-      const user = await axios.post("http://localhost:8080/api/users", userData)
+      const user = await axios.post("https://astroprod.onrender.com/api/users", userData)
       localStorage.setItem("user", JSON.stringify(user.data[0]));
+      console.log(user.data)
       setUser(user.data[0]); 
       navigate("/booking");
     }

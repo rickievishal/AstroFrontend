@@ -8,11 +8,11 @@ const PaymentComponent = ({paymentAmount,formData,userInfo}) => {
   const { error, isLoading, Razorpay } = useRazorpay();
   const handlePaymentSucess = async (data) =>{
     console.log(data)
-    const response = await axios.put(`http://localhost:8080/api/bookings/${data._id}`,{...data , payment_status : true})
+    const response = await axios.put(`https://astroprod.onrender.com/api/bookings/${data._id}`,{...data , payment_status : true})
     navigate('/PaymentSuccess');
   }
   const handlePayment = async () => {
-      const { data } = await axios.post('http://localhost:8080/create-order', {
+      const { data } = await axios.post('https://astroprod.onrender.com/create-order', {
         amount: paymentAmount*100
       });
        const formatedFormData = {
@@ -28,7 +28,7 @@ const PaymentComponent = ({paymentAmount,formData,userInfo}) => {
       };
       let book;
      try{
-       const booking = await axios.post("http://localhost:8080/api/bookings",formatedFormData)
+       const booking = await axios.post("https://astroprod.onrender.com/api/bookings",formatedFormData)
        book = booking.data;
      }
      catch(err){
